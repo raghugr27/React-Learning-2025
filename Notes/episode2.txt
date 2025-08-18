@@ -1,0 +1,11 @@
+how to initialize npm in thr project.
+creation of package.json
+package.json is an configruation for npm .
+creating package.json from scratch.
+installing parcel bundler.
+dev dependencies and normal dependencies.
+transitive dependencies.
+diff b/w caret and tilde symbol.
+creating local server with parcel.
+creating production build in parcel.
+adding scripts to start and build in parcel in package.json

@@ -1,0 +1,33 @@
+{
+  "name": "react-learning-2025",
+  "version": "1.0.0",
+  "description": "React Learning",
+  "homepage": "https://github.com/raghugr27/React-Learning-2025#readme",
+  "bugs": {
+    "url": "https://github.com/raghugr27/React-Learning-2025/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raghugr27/React-Learning-2025.git"
+  },
+  "license": "ISC",
+  "author": "RaghuGR27",
+  "type": "commonjs",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "serve": "parcel serve index.html --port 3000",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "browserlist": [
+    "0.2%",
+    "not dead"
+  ]
+}
