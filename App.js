@@ -8,14 +8,26 @@ import ReactDOM from "react-dom/client";
 // root.appendChild(heading);
 
 // Hello World with React
-let heading = React.createElement("div", { id: "parent" }, [
-  React.createElement("h1", {}, "Hello World with React"),
-  React.createElement("h2", {}, "This is a React Component"),
-]);
-let root = ReactDOM.createRoot(document.getElementById("root1"));
-root.render(heading); // converts the React element to HTML and renders it to the DOM
-console.log("heading", heading);
+// let heading = React.createElement("div", { id: "parent" }, [
+//   React.createElement("h1", {}, "Hello World with React"),
+//   React.createElement("h2", {}, "This is a React Component"),
+// ]);
+// let root = ReactDOM.createRoot(document.getElementById("root1"));
+// root.render(heading); // converts the React element to HTML and renders it to the DOM
+// console.log("heading", heading);
 
 // Inspecting React in Dev Console
 // Open Dev Tools in your browser and type `React` to see if React is available.
 // You can also type `ReactDOM` to check if ReactDOM is available.
+const jsxHeading = <h1>Heading from JSX</h1>;
+const HeadingComponent = () => {
+  return (
+    <div>
+      {" "}
+      {jsxHeading}
+      <h1>Heading from JSX Component</h1>
+    </div>
+  );
+};
+const root = ReactDOM.createRoot(document.getElementById("root1"));
+root.render(<HeadingComponent />); // converts the JSX to React element and renders it to the DOM
