@@ -19,12 +19,17 @@ import ReactDOM from "react-dom/client";
 // Inspecting React in Dev Console
 // Open Dev Tools in your browser and type `React` to see if React is available.
 // You can also type `ReactDOM` to check if ReactDOM is available.
-const jsxHeading = <h1>Heading from JSX</h1>;
+const jsxHeading =()=> (
+  <div>
+    <h1>Heading from JSX</h1>
+    <span>its an element</span>
+  </div>
+);
 const HeadingComponent = () => {
   return (
     <div>
       {" "}
-      {jsxHeading}
+      {jsxHeading()}
       <h1>Heading from JSX Component</h1>
     </div>
   );
