@@ -11,3 +11,4 @@
    # React DOM is used to perform dom manipulations and render web page.
    # react create element is just an javascript object .
    # react dom is  to convert react object to html and render in web page
+# React Reconciliation and React Fiber and virtual dom and react fibre architecture
