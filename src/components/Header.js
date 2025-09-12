@@ -1,9 +1,11 @@
 import React,{useState} from "react";
 import { Link } from "react-router";
 import { LOGO_URL } from "../utils/constants";
+import useCheckOnlineStatus from "../utils/useCheckOnlineStatus";
 const Header =()=>{
 
   const [btnName,setBtnName]=useState("Login");
+  const isLoggedIn=useCheckOnlineStatus();
   const handleLoginClick=()=>{    
 
     setBtnName((prev)=>prev==="Login"?"Logout":"Login");
@@ -20,6 +22,7 @@ const Header =()=>{
      </div>
       <div className="nav-items">
         <ul>
+          <div>User Online Status :{isLoggedIn ? "🟢" : "❌"}</div>
           <Link to="/">Home</Link>
           <Link to="/about">About Us</Link>
           <Link to="/contact">Contact Us</Link>
