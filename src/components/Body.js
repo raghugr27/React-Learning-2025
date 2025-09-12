@@ -1,25 +1,14 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState} from 'react';
 import RestaurantCard from './RestaurantCard';
 import ShimmerUi from './ShimmerUi';
-import { FETCH_RESTAURANTS_URL } from '../utils/constants';
+
+import useRestaurantsData from '../utils/useRestaurantsData';
 const Body =()=>{
-const [restaurants,setRestaurants]=useState([]);
+
 const[filteredRestaurants,setFilteredRestaurants]=useState([]);
 const [searchText,setSearchText]=useState("");
+const restaurants=useRestaurantsData(setFilteredRestaurants);
 
-
-const fetchData=async()=>{
-  const data=await fetch(FETCH_RESTAURANTS_URL);
-  let  json=await data.json();       
-json = json?.data?.cards?.filter((data)=> data?.card?.card?.header?.title==="Top restaurant chains in Bangalore")?.[0]?.card?.card?.gridElements?.infoWithStyle?.restaurants ;
-
-setRestaurants(json);
-setFilteredRestaurants(json);
-
-
-};useEffect(()=>{
-  fetchData();
-},[]);
 
 const filterTopRatedRestaurant=()=>{
   let filteredList=restaurants.filter((res)=>res.info.avgRating>4.5);
