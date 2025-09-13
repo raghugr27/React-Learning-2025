@@ -12,22 +12,22 @@ const Header =()=>{
    
   } 
   return(
-    <div className="header">
-     <div className="logo-cotainer">
+    <div className="flex justify-between  border-2 border-black p-2 bg-gray-400 text-black">
+     <div className="max-w-40">
      <Link to="/"> <img
-        className="logo"
+       className="w-34 cursor-pointer"
         alt="logo"
         src={LOGO_URL}
       /></Link>
      </div>
-      <div className="nav-items">
-        <ul>
-          <div>User Online Status :{isLoggedIn ? "🟢" : "❌"}</div>
-          <Link to="/">Home</Link>
-          <Link to="/about">About Us</Link>
-          <Link to="/contact">Contact Us</Link>
+      <div className="flex items-center">
+        <ul className="flex gap-2">
+          <div className="font-bold">User Online Status :{isLoggedIn ? "🟢" : "❌"}</div>
+          <Link to="/" className=" text-blue-600 underline cursor-pointer">Home</Link>
+          <Link to="/about" className=" text-blue-600 underline cursor-pointer">About Us</Link>
+          <Link to="/contact" className=" text-blue-600 underline cursor-pointer">Contact Us</Link>
           <li>Cart</li>
-          <button className="login-btn" onClick={handleLoginClick}>{btnName}</button>
+          <button className="border w-20 h-10 rounded-xl border-black p-2 text-sm cursor-pointer" onClick={handleLoginClick}>{btnName}</button>
         </ul> 
         </div>
     </div>

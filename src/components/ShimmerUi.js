@@ -2,8 +2,8 @@ import React from 'react'
 
 const ShimmerUi = () => {
   return (
-    <div className='shimmer-ui-container'>
-        {Array(10).fill("").map((e,index)=><div key={index} className='shimmer-ui-card'>
+    <div className=' flex gap-7 flex-wrap'>
+        {Array(10).fill("").map((e,index)=><div key={index} className='w-65 h-90 border border-gray-200 rounded-xl transition-shadow animate-pulse bg-gray-200'>
             
         </div>)}
       

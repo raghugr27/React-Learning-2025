@@ -14,6 +14,7 @@ const Body = () => {
 
 
   // fetch restaurants (your hook)
+  
   const restaurants = useRestaurantsData();
  
   // when restaurants arrive, show them by default
@@ -47,15 +48,15 @@ const Body = () => {
     );
   }
   return (
-    <div className="body">
-      <div className="filter-section">
-        <button className="filter-btn" onClick={filterTopRatedRestaurant}>
+    <div className="p-4">
+      <div className="mb-4">
+        <button className="border border-gray-500 text-black font-bold shadow rounded-xl p-2 cursor-pointer" onClick={filterTopRatedRestaurant}>
           Top Rated Restaurants
         </button>
 
         <input
           type="text"
-          className="search-input"
+          className="border border-gray-500 text-black font-bold shadow  p-2 m-2"
           placeholder="Search"
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
@@ -63,7 +64,7 @@ const Body = () => {
             if (e.key === "Enter") searchData();
           }}
         />
-        <button className="search-btn" onClick={searchData}>
+        <button className="border border-gray-500 p-2 w-20 rounded-2xl cursor-pointer" onClick={searchData}>
           Search
         </button>
       </div>
@@ -75,7 +76,7 @@ const Body = () => {
       {Array.isArray(restaurants) && restaurants.length > 0 && (
         <>
           {filteredRestaurants && filteredRestaurants.length > 0 ? (
-            <div className="res-container">
+            <div className="flex gap-5 flex-wrap cursor-pointer">
               {filteredRestaurants.map((restaurant, idx) => {
                 const key =
                   restaurant?.info?.id ?? restaurant?.id ?? `${restaurant?.info?.name ?? "r"}-${idx}`;
