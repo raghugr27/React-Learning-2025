@@ -12,3 +12,13 @@
    # react create element is just an javascript object .
    # react dom is  to convert react object to html and render in web page
 # React Reconciliation and React Fiber and virtual dom and react fibre architecture
+
+
+# Redux
+# configure redux store 
+# provide access of the store to the app
+# create slice 
+# slice takes configuration in the form of the object.
+# configuration values are name, initial state,reducers which contains action mapped with the reducer function.
+# to update the value an dispatch event is called with created reducer function
+# to access the value we use useselector
