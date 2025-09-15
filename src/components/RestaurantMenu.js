@@ -31,7 +31,7 @@ const addFoodItem=(item)=>{
 
     return( 
    <div key={id}>
- <div className='flex justify-between p-2 rounded- border cursor-pointer border-gray-200 shadow-xl shadow-gray-400 mb-5 '  onClick={()=>{setShowIndex(id)}}>
+ <div className='flex justify-between p-2 rounded- border cursor-pointer border-gray-200 shadow-xl shadow-gray-400 mb-5 '  onClick={()=>{setShowIndex((prevId)=> prevId===id ? null : id)}}>
        <div className='font-bold text-xl w-full'>{title} ({itemCards?.length})</div>
        ⬇️
     </div>
