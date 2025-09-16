@@ -10,16 +10,19 @@ import appStore from "./store/appStore";
 import ErrorElement from "./components/ErrorElement";
 import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
+import UserContext from "./utils/UserContext";
 import Cart from "./components/Cart";
 const About = lazy(()=>import("./components/About"));
 
 const AppLayout =()=>{
   return(<Provider store={appStore}>
-    <div>
+   <UserContext.Provider value={"raghu"}>
+     <div>
 <Header />
 <Outlet />
 {/* <Footer /> */}
   </div>
+   </UserContext.Provider>
     </Provider>)
 }
 const appRouter=createBrowserRouter([

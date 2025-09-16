@@ -22,3 +22,14 @@
 # configuration values are name, initial state,reducers which contains action mapped with the reducer function.
 # to update the value an dispatch event is called with created reducer function
 # to access the value we use useselector
+
+# Types of Testing
+# unit Testing.
+# Integration Testing.
+# End to End Testing.
+# configure testing in the project
+install React Testing Library.
+install jest.
+install babel dependencies
+configure babel dependencies.
+configure parcel confiure file to reset default babel transpilation
