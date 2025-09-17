@@ -32,4 +32,6 @@ install React Testing Library.
 install jest.
 install babel dependencies
 configure babel dependencies.
-configure parcel confiure file to reset default babel transpilation
+configure parcel confiure file to reset default babel transpilation.
+configure jest -- npx create-jest@latest
+install jsdom --  npm i jest-environment-jsdom

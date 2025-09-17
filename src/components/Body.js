@@ -77,6 +77,7 @@ const Body = () => {
         <>
           {filteredRestaurants && filteredRestaurants.length > 0 ? (
             <div className="flex gap-5 flex-wrap cursor-pointer">
+              {console.log("Filtered Restaurants:", filteredRestaurants[0])}
               {filteredRestaurants.map((restaurant, idx) => {
                 const key =
                   restaurant?.info?.id ?? restaurant?.id ?? `${restaurant?.info?.name ?? "r"}-${idx}`;
